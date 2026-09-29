@@ -60,6 +60,7 @@
     "body-parser": "^2.3.0",
     "bonjour-service": "^1.4.4",
     "boolbase": "^1.0.0",
+    "bootstrap": "^5.3.8",
     "braces": "^3.0.3",
     "browserslist": "^4.29.1",
     "buffer-from": "^1.1.2",
