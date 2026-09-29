@@ -24,7 +24,7 @@ export class AppRenderer {
     userLibrary: Library<User>
   ) {
     const el = document.getElementById(containerId);
-    if (!el) throw new Error(\`Container \${containerId} not found\`);
+    if (!el) throw new Error(`Container ${containerId} not found`);
     this.container = el;
     this.bookLibrary = bookLibrary;
     this.userLibrary = userLibrary;
@@ -41,7 +41,7 @@ export class AppRenderer {
     // Search
     const searchContainer = document.createElement('div');
     searchContainer.className = 'mb-4';
-    searchContainer.innerHTML = \`<input type="text" class="form-control" id="search-input" placeholder="Пошук книг за назвою або автором..." value="\${this.searchQuery}">\`;
+    searchContainer.innerHTML = `<input type="text" class="form-control" id="search-input" placeholder="Пошук книг за назвою або автором..." value="${this.searchQuery}">`;
     
     const root = document.createElement('div');
     root.className = 'container';
@@ -139,7 +139,7 @@ export class AppRenderer {
         Storage.save('books', this.bookLibrary.getAll());
         
         NotificationService.notify('Книгу успішно позичено!');
-        NotificationService.showModal('Успіх', \`Книга "\${book.title}" була позичена користувачем \${user.name}\`);
+        NotificationService.showModal('Успіх', `Книга "${book.title}" була позичена користувачем ${user.name}`);
         this.render();
       } catch (e: any) {
         NotificationService.showModal('Помилка', e.message || 'Не вдалося позичити книгу');
@@ -166,7 +166,7 @@ export class AppRenderer {
     Storage.save('books', this.bookLibrary.getAll());
     
     NotificationService.notify('Книгу успішно повернуто!');
-    NotificationService.showModal('Успіх', \`Книга "\${book.title}" була повернута.\`);
+    NotificationService.showModal('Успіх', `Книга "${book.title}" була повернута.`);
     this.render();
   }
 }
