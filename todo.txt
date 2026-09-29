@@ -1,0 +1,6 @@
+connect:
+- eslint
+- prettier
+- tailwind
+- husky
+- 

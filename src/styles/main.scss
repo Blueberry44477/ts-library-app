@@ -1,0 +1,15 @@
+$body-bg: #f8f9fa;
+
+body {
+  background-color: $body-bg;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.toast {
+  transition: opacity 0.3s ease-in-out;
+}
